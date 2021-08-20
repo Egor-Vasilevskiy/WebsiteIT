@@ -477,7 +477,7 @@ textarea {
 }
 
 .intro {
-  background-image: url(/src/image/backgroundHeader.png);
+  background-image: url(../image/backgroundHeader.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -889,7 +889,7 @@ textarea {
 }
 
 .aboutUsVideo {
-  background-image: url(/src/image/image.png);
+  background-image: url(../image/image.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
