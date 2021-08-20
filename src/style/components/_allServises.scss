@@ -1,0 +1,53 @@
+.allServises {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom, #504DC2 50%, #FFFFFF 50%);
+    margin-bottom: 95px;
+  
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 100px;
+    }
+
+    &__title {
+      @include font-face($weight:bold); 
+      @include adaptiv-font(36, 18);
+      @include adapriv-lineHeight(50, 25);
+      color: #FFFFFF;
+      max-width: 540px;
+    }
+  
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin:70px 0 85px 0;
+
+    }
+  }
+  
+  .card {
+    width: 350px;
+    
+    &__title {
+      margin: 30px 0;
+      @include font-face($weight:600); 
+      @include adaptiv-font(18, 15);
+      @include adapriv-lineHeight(22, 13);
+      color: #000000;
+    }
+    
+    &__copy {
+      @include font-face($align:left); 
+      @include adaptiv-font(16, 14);
+      @include adapriv-lineHeight(25, 13);
+      color: #999999;
+      margin-bottom: 30px;
+    }
+}

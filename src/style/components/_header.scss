@@ -1,0 +1,85 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__menu {
+    padding-right: 20px;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__list li {
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+  }
+  
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+
+.intro {
+  background-image: url(/src/image/backgroundHeader.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  color: #fff;
+  padding-top: 100px;
+
+  &__body {
+    max-width: 830px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__suptitle {
+    @include font-face($weight:500); 
+    @include adaptiv-font(16, 14);
+    @include adapriv-lineHeight(20, 12);
+  }
+
+  &__title {
+    @include font-face($weight:800); 
+    @include adaptiv-font(45, 24);
+    @include adapriv-lineHeight(64, 32);
+    margin-bottom: 45px;
+  }
+}

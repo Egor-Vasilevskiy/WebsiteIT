@@ -1,0 +1,241 @@
+ 
+
+@include md {
+    body.lock {
+		overflow: hidden;
+	}
+
+    .header {
+
+        &__body {
+            height: 50px;
+        }
+
+        &__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+            margin-right: 20px;
+
+            & span {
+               position: absolute;
+                background-color: #fff;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s; 
+            }
+
+            &:before, &:after {
+                content: "";
+                background-color:#fff;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            &:before {
+                top: 0;
+            }
+
+            &:after {
+                bottom: 0px;
+            }
+
+            &.active:before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            &.active:after {
+                transform: rotate(-45deg);
+                top: 9px;
+            }
+
+            &.active span {
+                transform: scale(0);
+            }
+        }
+    
+        &__menu {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 70px 10px 20px 10px;
+            transition: all 0.3s ease 0s;
+            justify-content: flex-end;
+            display: flex;
+
+            &.active {
+                top: 0;
+            }
+        }
+
+        &__list {
+            display: block;
+
+            & li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .intro__body {
+        padding: 0 20px;
+    }
+
+    //!-----------------------SERVISES-----------------------------!//
+
+    .servises {
+        padding: 0 20px;
+    }
+
+    .servises__body {
+        padding: 0 20px;
+    }
+
+    .about {
+        padding: 0 20px;
+
+        &__block--text {
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        &__numbers {
+            &--item {
+                width: 40%;
+                margin: 10px;
+            }
+        }
+    }
+
+    .aboutUsImage {
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .aboutUsVideo img{
+        width: 100%;
+    }
+
+    .allServises {
+        background: #fff;
+    }
+
+    .allServises__main {
+        padding: 0 20px;    
+        justify-content: center;
+        margin: 0px 0 85px 0;
+    }
+
+    .allServises__head {
+        background: blue;
+        padding: 80px 0;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .allServises__title {
+        color: #000000;
+        padding-bottom: 30px;
+    }
+
+    .card__actions {
+        text-align: center;
+    }
+
+    .card {
+        padding-bottom: 20px;
+
+        &__copy {
+            text-align: center;
+        }
+    }
+    .allProject {
+        padding: 0 20px;
+
+        &__inner {
+            margin-bottom: 50px;
+        }
+    }
+
+    .allProject__img img{
+        margin: 20px 0;
+    }
+
+    .aboutUsVideo {
+        margin-bottom: 70px;
+    }
+
+    .subscribe {
+        form {
+            display: flex;
+        }
+    }
+
+    .email__input{
+        max-width: 180px;
+        padding-right: 0;
+    }
+
+    .subscribe__input {
+        max-width: 150px;
+        padding: 0 10px;
+    }
+
+    .footer__container {
+        padding: 70px 0 70px 50px;
+    }
+}
+
+
+@include xl {
+    .about__block--text {
+        margin-right: 0;
+    }
+}
+
+@media (max-width:320px) {
+    .circle {
+        width: 170px;
+    }
+}
+
+@media (min-width:370px) and (max-width:425px) {
+    .circle {
+        width: 155px;
+    }
+
+    .footer__links {
+        padding-bottom: 15px;
+    }
+}
+
+
+@media (min-width:370px) and (max-width:465px) {
+    .circle {
+        width: 155px;
+    }
+
+    .footer__links {
+        padding-bottom: 15px;
+        width: 100%;
+    }
+}
+
+@media (min-width:750px) {
+    .footer__container {
+        padding: 70px 0;
+    }
+}

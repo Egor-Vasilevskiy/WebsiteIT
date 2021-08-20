@@ -1,0 +1,36 @@
+.allProject {
+    background-color: #F6F6F8;
+    padding-bottom: 100px;
+  
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {   
+      @include font-face($weight:bold); 
+      @include adaptiv-font(36, 18);
+      @include adapriv-lineHeight(50, 25);
+      color: #000000;
+      margin-top: 100px;
+    }
+  
+    &__copy {     
+      @include font-face(); 
+      @include adaptiv-font(16, 14);
+      @include adapriv-lineHeight(25, 13);
+      color: #999999;
+      max-width: 730px;
+      margin: 50px 0 70px 0;
+    }
+  
+    &__img {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+  }
